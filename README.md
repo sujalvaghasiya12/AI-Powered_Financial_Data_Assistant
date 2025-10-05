@@ -54,13 +54,20 @@ json
 }
 
 Technical Stack
+
 Language: Python 3.8+
+
 Framework: FastAPI
+
 Embedding Model: sentence-transformers/all-MiniLM-L6-v2
+
 Vector Database: FAISS (Facebook AI Similarity Search)
+
 Data Generation: Custom Python generator with realistic patterns
 
+
 📦 Installation
+
 Clone the repository
 
 bash
@@ -70,6 +77,7 @@ Install dependencies
 
 bash
 pip install -r requirements.txt
+
 🚀 Quick Start
 Run the application
 
@@ -179,5 +187,6 @@ Query Processing → Converts user query to embedding
 Similarity Search → Finds most similar transactions
 
 Result Processing → Returns relevant transactions
+
 
 
