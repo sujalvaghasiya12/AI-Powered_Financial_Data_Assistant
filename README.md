@@ -16,9 +16,6 @@ Build an AI-powered financial data assistant that can understand and answer user
 
 ## 🏗️ Project Structure
 
-
-## 🏗️ Project Structure
-
 financial-data-assistant/
 │
 ├── data/
@@ -182,4 +179,5 @@ Query Processing → Converts user query to embedding
 Similarity Search → Finds most similar transactions
 
 Result Processing → Returns relevant transactions
+
 
