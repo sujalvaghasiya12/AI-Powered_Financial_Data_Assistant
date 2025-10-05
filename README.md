@@ -121,10 +121,6 @@ GET /rebuild-index - Force rebuild FAISS index
 
 "Salary deposits this month"
 
-"Entertainment spending"
-
-"Travel expenses"
-
 "Show all UPI transactions above ₹1000"
 
 "What's my biggest expense in August?"
@@ -187,6 +183,7 @@ Query Processing → Converts user query to embedding
 Similarity Search → Finds most similar transactions
 
 Result Processing → Returns relevant transactions
+
 
 
 
