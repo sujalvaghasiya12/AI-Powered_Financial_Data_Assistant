@@ -15,7 +15,7 @@ Build an AI-powered financial data assistant that can understand and answer user
 - **Multi-User Support**: Isolated data and vector stores per user
 
 ## 🏗️ Project Structure
-
+<pre>
 financial-data-assistant/
 │
 ├── data/
@@ -35,12 +35,12 @@ financial-data-assistant/
 │ └── db_config.py # Vector DB configuration
 ├── requirements.txt # Python dependencies
 └── README.md
-
+</pre>
 
 ## 📊 Data Model
 
 Each transaction includes the following fields:
-
+<pre>
 json
 {
   "id": "txn_101",
@@ -52,10 +52,10 @@ json
   "category": "Food",
   "balance": 12480
 }
-
+</pre>
 Technical Stack
-
-Language: Python 3.8+
+<pre>
+Language: Python 
 
 Framework: FastAPI
 
@@ -64,10 +64,10 @@ Embedding Model: sentence-transformers/all-MiniLM-L6-v2
 Vector Database: FAISS (Facebook AI Similarity Search)
 
 Data Generation: Custom Python generator with realistic patterns
-
+</pre>
 
 📦 Installation
-
+<pre>
 Clone the repository
 
 bash
@@ -77,44 +77,52 @@ Install dependencies
 
 bash
 pip install -r requirements.txt
-
+</pre>
 🚀 Quick Start
+<pre>
 Run the application
 
 bash
 uvicorn api.app:app --reload --port 8000
+</pre>
 Access the API
-
+<pre>
 API Documentation: http://localhost:8000/docs
-
 Health Check: http://localhost:8000/health
+</pre>
 
 📝 API Endpoints
+<pre>
 🔍 Search Transactions
 GET /api/v1/search
+</pre>
 
-Parameters:
-
+Parameters
+<pre>
 query (required): Natural language query
 
 top_k (optional): Number of results (default: 5, max: 200)
-
-Example Queries:
-
-bash
+</pre>
+Example Queries
+<pre>
 # Basic semantic search
 curl "http://localhost:8000/api/v1/search?query=food%20expenses"
 
 # With specific user
 curl "http://localhost:8000/api/v1/search?query=shopping&user_id=user_2&top_k=5"
+ </pre> 
 🔧 Utility Endpoints
+<pre>
 GET / - API information
 
 GET /health - Health check
 
 GET /rebuild-index - Force rebuild FAISS index
+  
+</pre>
 
 💬 Example Queries
+<pre>
 "Show my food expenses"
 
 "Recent shopping transactions"
@@ -126,52 +134,27 @@ GET /rebuild-index - Force rebuild FAISS index
 "What's my biggest expense in August?"
 
 "How much did I spend on food last month?"
-
-🔧 Configuration
-Vector Database Config
-python
-
-@dataclass
-class VectorDBConfig:
-    embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2"
-    embedding_dim: int = 384
-    faiss_index_path: str = "embeddings/vector_store.faiss"
-    top_k_results: int = 10
-
-Data Generation Config
-
-python
-@dataclass
-class DataConfig:
-    num_users: int = 3
-    min_transactions: int = 100
-    max_transactions: int = 200
-    data_path: str = "data/transactions.json"
-
+</pre>
 🎨 Features
-
+<pre>
 1. AI-Based Data Generation
 Generates 100-200 realistic transactions per user
-
 Maintains proper balance calculations
-
 Uses realistic merchant names and descriptions
-
 Supports multiple transaction categories
 
 2. Semantic Search
 Converts transactions to embedding text
-
 Uses cosine similarity for vector search
-
 Supports natural language queries
 
 3. Multi-User Support
-Isolated data per user
-
+Isolated data per user 
 User-specific filtering
-
+  
+</pre>
 🔍 How It Works
+<pre>
 Data Generation → Creates synthetic financial transactions
 
 Embedding Creation → Converts transactions to vector embeddings
@@ -183,6 +166,7 @@ Query Processing → Converts user query to embedding
 Similarity Search → Finds most similar transactions
 
 Result Processing → Returns relevant transactions
+</pre>
 
 
 
